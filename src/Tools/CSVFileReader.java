@@ -100,8 +100,6 @@ public class CSVFileReader {
         // Criamos o ArrayList de Utilizadores, vazio
         ArrayList<User> usersArray = new ArrayList<>();
 
-        // Avançar o cabeçalho
-        usersScanner.nextLine();
 
         // Ciclo que vai correr para cada linha do ficheiro
         while (usersScanner.hasNextLine()) {
@@ -110,7 +108,7 @@ public class CSVFileReader {
             String linha = usersScanner.nextLine();
 
             // Separamos a linha, com base no seu separador ";"
-            String[] linhaSeparada = linha.split(";");
+            String[] linhaSeparada = linha.split(",");
 
             // Reunir todas as informações da Venda
             String tipoConta = linhaSeparada[0];

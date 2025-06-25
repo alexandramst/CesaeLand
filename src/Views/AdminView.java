@@ -35,9 +35,9 @@ public class AdminView {
             opcaoAdmin= input.nextInt();
 
             switch (opcaoAdmin){
-                case 1: // Produto que vendeu mais unidades
-                    System.out.println("\n***** Produto que vendeu mais unidades *****");
-
+                case 1: // Consultar o total de todas as vendas
+                    int totalVendas = adminController.consultarTotalVendas();
+                    System.out.println("Total de todas as vendas: " + totalVendas);
                     break;
 
                 case 2: //Analisar qual o produto que gerou mais valor de vendas.

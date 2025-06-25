@@ -14,8 +14,14 @@ public class VendasRepo {
     public VendasRepo() throws FileNotFoundException {
         CSVFileReader csvFR = new CSVFileReader();
 
-        this.vendasArray = csvFR.vendasFileReader("CesaeLand/Files/Cesaeland_vendas.csv");
+        this.vendasArray = csvFR.vendasFileReader("Files/Cesaeland_vendas.csv");
     }
+
+    public ArrayList<Venda> getVendasArray() {
+        return vendasArray;
+    }
+
+
 
 
 }

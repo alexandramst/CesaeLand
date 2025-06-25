@@ -1,8 +1,23 @@
 package Views;
 
+import Controllers.ClienteController;
+import Models.Atracao;
+
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ClienteView {
+
+    private ArrayList<Atracao> atacaoArray;
+
+    private ClienteController clientController;
+
+    public ClienteView() throws FileNotFoundException {
+        this.clientController = new ClienteController();
+    }
+
     public void clientMenu() {
         Scanner input = new Scanner(System.in);
         int opcaoCliente;
@@ -18,7 +33,8 @@ public class ClienteView {
 
             switch (opcaoCliente) {
                 case 1:
-                    break;
+                    System.out.println("******* Consultar Atrações Disponíveis *******");
+                    System.out.println(clientController.consultaAtracaoDisponivel(atacaoArray));
                 case 2:
                     break;
                 case 0:
